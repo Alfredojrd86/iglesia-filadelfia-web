@@ -1,0 +1,67 @@
+{
+  "project": {
+    "name": "Iglesia Filadelfia - Missionary Management System",
+    "description": "A comprehensive system for managing missionary activities, reports, and church communications",
+    "techStack": {
+      "frontend": ["Next.js 14", "React 18", "TypeScript", "Tailwind CSS"],
+      "backend": ["Supabase", "PostgreSQL", "Node.js", "TypeScript"],
+      "deployment": ["Vercel", "GitHub"]
+    }
+  },
+  "agents": {
+    "frontend": {
+      "focus": "UI/UX Development",
+      "specialties": [
+        "React Components",
+        "Responsive Design",
+        "Accessibility",
+        "Performance Optimization",
+        "User Experience"
+      ],
+      "commands": [
+        "claude-fe \"Create a responsive navigation component\"",
+        "claude-fe \"Design the missionary listing page with filters\"",
+        "claude-fe \"Implement form validation for contact forms\"",
+        "claude-fe \"Create loading states and error handling\""
+      ]
+    },
+    "backend": {
+      "focus": "Server & Database Development",
+      "specialties": [
+        "API Design",
+        "Database Schema",
+        "Authentication",
+        "Security",
+        "Performance"
+      ],
+      "commands": [
+        "claude-be \"Design the missionary database schema\"",
+        "claude-be \"Create API endpoints for missionary CRUD\"",
+        "claude-be \"Implement user authentication with Supabase\"",
+        "claude-be \"Set up email notifications for reports\""
+      ]
+    },
+    "fullstack": {
+      "focus": "Project Architecture & Integration",
+      "specialties": [
+        "System Design",
+        "Project Planning",
+        "Integration",
+        "DevOps",
+        "Quality Assurance"
+      ],
+      "commands": [
+        "claude-fs \"Plan the complete missionary feature implementation\"",
+        "claude-fs \"Review project structure and suggest improvements\"",
+        "claude-fs \"Create deployment strategy for production\"",
+        "claude-fs \"Design testing strategy for the application\""
+      ]
+    }
+  },
+  "workflow": {
+    "planning": "claude-fs",
+    "backend": "claude-be", 
+    "frontend": "claude-fe",
+    "integration": "claude-fs"
+  }
+}
