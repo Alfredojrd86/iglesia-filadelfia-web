@@ -1,0 +1,11 @@
+import { createServerComponentClient } from '@supabase/ssr'
+import { cookies } from 'next/headers'
+import type { Database } from './database.types'
+
+export function createServerSupabaseClient() {
+  return createServerComponentClient<Database>({
+    cookies,
+  })
+}
+
+
