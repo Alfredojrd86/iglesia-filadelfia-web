@@ -3,16 +3,19 @@ import Link from 'next/link'
 
 export default function DonationCTA() {
   return (
-    <section className="mt-12 bg-[#111]/[0.03] dark:bg-white/[0.04]">
+    <section className="mt-12 bg-[#F5F5F5]">
       <Container className="py-12 sm:py-16 grid gap-8 md:grid-cols-2 items-center">
         <div className="space-y-4">
-          <p className="uppercase text-xs tracking-wider text-foreground/60">Apoya la misión</p>
+          <p className="uppercase text-xs tracking-wider text-foreground/60">
+            Apoya la misión
+          </p>
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
             Combustiona más gozo en Jesucristo
           </h2>
           <p className="text-foreground/75">
-            Tus oraciones y ofrendas nos ayudan a alcanzar a más personas con el evangelio
-            y sostener a nuestros misioneros. ¿Te unes con una ofrenda hoy?
+            Tus oraciones y ofrendas nos ayudan a alcanzar a más personas con el
+            evangelio y sostener a nuestros misioneros. ¿Te unes con una ofrenda
+            hoy?
           </p>
           <div className="flex gap-3">
             <Link
@@ -39,7 +42,7 @@ export default function DonationCTA() {
         </div>
       </Container>
     </section>
-  )
+  );
 }
 
 

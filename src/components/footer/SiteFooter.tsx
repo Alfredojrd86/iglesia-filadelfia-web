@@ -17,18 +17,67 @@ export default function SiteFooter() {
           <div className="space-y-2">
             <p className="font-medium">Sitio</p>
             <ul className="space-y-1">
-              <li><Link href="/misioneros" className="text-foreground/70 hover:text-foreground">Misioneros</Link></li>
-              <li><Link href="/eventos" className="text-foreground/70 hover:text-foreground">Eventos</Link></li>
-              <li><Link href="/recursos" className="text-foreground/70 hover:text-foreground">Recursos</Link></li>
-              <li><Link href="/donaciones" className="text-foreground/70 hover:text-foreground">Dar</Link></li>
+              <li>
+                <Link
+                  href="/misioneros"
+                  className="text-foreground/70 hover:text-foreground"
+                >
+                  Misioneros
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/eventos"
+                  className="text-foreground/70 hover:text-foreground"
+                >
+                  Eventos
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/acerca"
+                  className="text-foreground/70 hover:text-foreground"
+                >
+                  Acerca de nosotros
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/donaciones"
+                  className="text-foreground/70 hover:text-foreground"
+                >
+                  Dar
+                </Link>
+              </li>
             </ul>
           </div>
           <div className="space-y-2">
             <p className="font-medium">Contacto</p>
             <ul className="space-y-1">
-              <li><a href="mailto:info@iglesia-filadelfia.org" className="text-foreground/70 hover:text-foreground">info@iglesia-filadelfia.org</a></li>
-              <li><a href="#" className="text-foreground/70 hover:text-foreground">Facebook</a></li>
-              <li><a href="#" className="text-foreground/70 hover:text-foreground">YouTube</a></li>
+              <li>
+                <a
+                  href="mailto:info@iglesia-filadelfia.org"
+                  className="text-foreground/70 hover:text-foreground"
+                >
+                  info@iglesia-filadelfia.org
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-foreground/70 hover:text-foreground"
+                >
+                  Facebook
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-foreground/70 hover:text-foreground"
+                >
+                  YouTube
+                </a>
+              </li>
             </ul>
           </div>
         </nav>
@@ -41,24 +90,33 @@ export default function SiteFooter() {
               placeholder="Email"
               className="w-full rounded-md border px-3 py-2 text-sm bg-background"
             />
-            <button type="button" className="rounded-md bg-foreground text-background px-3 py-2 text-sm">
+            <button
+              type="button"
+              className="rounded-md bg-foreground text-background px-3 py-2 text-sm"
+            >
               Suscribirse
             </button>
           </div>
-          <p className="text-xs text-foreground/60">Prometemos no enviar spam.</p>
+          <p className="text-xs text-foreground/60">
+            Prometemos no enviar spam.
+          </p>
         </form>
       </Container>
       <Container className="pb-8">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-foreground/60">
           <p>© {year} Iglesia Filadelfia. Todos los derechos reservados.</p>
           <div className="flex gap-4">
-            <Link href="#" className="hover:text-foreground">Privacidad</Link>
-            <Link href="#" className="hover:text-foreground">Términos</Link>
+            <Link href="#" className="hover:text-foreground">
+              Privacidad
+            </Link>
+            <Link href="#" className="hover:text-foreground">
+              Términos
+            </Link>
           </div>
         </div>
       </Container>
     </footer>
-  )
+  );
 }
 
 

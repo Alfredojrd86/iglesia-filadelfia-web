@@ -18,6 +18,8 @@ export default function Home() {
       'Contenido de ejemplo para previsualizar cómo lucen las tarjetas en el grid. Este texto es reemplazado por datos reales.',
     meta: i % 2 === 0 ? 'ARTÍCULO' : 'REPORTE',
     imageSrc: '/window.svg',
+    authorName: 'John Piper',
+    authorAvatarUrl: 'https://i.pravatar.cc/80?img=' + (i + 1),
   }));
 
   return (

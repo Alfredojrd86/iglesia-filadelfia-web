@@ -3,8 +3,8 @@
 :root {
   --background: #ffffff;
     /* keep full white */
-    --foreground: #1f2937;
-    /* darker text (gray-800) for contrast */
+    --foreground: #3a3c3f;
+      /* rgb(58,60,63) */
 }
 
 @theme inline {
@@ -18,7 +18,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #ffffff;
-      --foreground: #1f2937;
+    --foreground: #3a3c3f;
+      /* keep same in dark */
   }
 }
 
