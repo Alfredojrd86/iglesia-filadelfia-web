@@ -18,7 +18,7 @@ type RecentGridProps = {
 
 export default function RecentGrid({ title = 'Recientes', items, moreHref }: RecentGridProps) {
   return (
-    <section className="py-8 sm:py-12">
+    <section className="py-8 sm:py-12 bg-[#ffffff]">
       <Container>
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-xl sm:text-2xl font-semibold text-[#1f2937]">

@@ -1,4 +1,5 @@
 'use client';
+import {useEffect, useRef, useState} from 'react';
 import {usePathname} from 'next/navigation';
 import Link from 'next/link';
 import Container from '../ui/Container';
@@ -13,8 +14,55 @@ const nav = [
 
 export default function MainNav() {
   const pathname = usePathname();
+  const [isHiddenOnScroll, setIsHiddenOnScroll] = useState(false);
+
+  useEffect(() => {
+    const lastScrollY = {
+      current: typeof window !== 'undefined' ? window.scrollY : 0,
+    } as {current: number};
+    const ticking = {current: false} as {current: boolean};
+    const lastToggleAt = {current: 0} as {current: number};
+
+    const update = () => {
+      const currentY = window.scrollY;
+      const delta = currentY - lastScrollY.current;
+      const now = Date.now();
+      // Ignora micro movimientos para evitar flicker
+      if (Math.abs(delta) < 4) {
+        ticking.current = false;
+        return;
+      }
+      if (delta > 0 && currentY > 120) {
+        if (!isHiddenOnScroll && now - lastToggleAt.current > 200) {
+          setIsHiddenOnScroll(true);
+          lastToggleAt.current = now;
+        }
+      } else if (delta < 0) {
+        if (isHiddenOnScroll && now - lastToggleAt.current > 200) {
+          setIsHiddenOnScroll(false);
+          lastToggleAt.current = now;
+        }
+      }
+      lastScrollY.current = currentY;
+      ticking.current = false;
+    };
+
+    const handleScroll = () => {
+      if (!ticking.current) {
+        ticking.current = true;
+        requestAnimationFrame(update);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, {passive: true});
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [isHiddenOnScroll]);
   return (
-    <header className="sticky top-0 z-40 bg-[#ffffff] shadow-md">
+    <header
+      className={`sticky top-0 z-40 bg-[#ffffff] shadow-md transition-transform duration-300 will-change-transform ${
+        isHiddenOnScroll ? '-translate-y-full' : 'translate-y-0'
+      }`}
+    >
       <Container className="px-0 sm:px-0 lg:px-0 grid grid-cols-3 h-16 items-center">
         <Link
           href="/"

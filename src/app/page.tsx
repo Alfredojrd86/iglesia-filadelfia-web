@@ -23,7 +23,7 @@ export default function Home() {
   }));
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-[#ffffff]">
       <Hero
         title="Viste tu corazón para adorar"
         subtitle="Recursos, noticias y reportes para la iglesia local y nuestras misiones."

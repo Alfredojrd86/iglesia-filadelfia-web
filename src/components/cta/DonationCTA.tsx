@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function DonationCTA() {
   return (
-    <section className="mt-12 bg-gray-100">
+    <section className="mt-12 bg-[#f7f7f7]">
       <Container className="py-12 sm:py-16 grid gap-8 md:grid-cols-2 items-center">
         <div className="space-y-4">
           <p className="uppercase text-xs tracking-wider text-foreground/60">
