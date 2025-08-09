@@ -14,7 +14,7 @@ const nav = [
 export default function MainNav() {
   const pathname = usePathname();
   return (
-    <header className="sticky top-0 z-40 bg-[#ffffff] shadow-sm">
+    <header className="sticky top-0 z-40 bg-[#ffffff] shadow-md">
       <Container className="px-0 sm:px-0 lg:px-0 grid grid-cols-3 h-16 items-center">
         <Link
           href="/"
@@ -55,26 +55,6 @@ export default function MainNav() {
                       }`}
                     />
                   </Link>
-                  <div className="absolute left-1/2 -translate-x-1/2 top-full mt-0 w-56 rounded-md border bg-white shadow-lg opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition">
-                    <ul className="py-2 text-sm">
-                      <li>
-                        <Link
-                          href="/acerca"
-                          className="block px-4 py-2 hover:bg-gray-50 whitespace-nowrap"
-                        >
-                          Acerca de nosotros
-                        </Link>
-                      </li>
-                      <li>
-                        <Link
-                          href="/acerca#faith"
-                          className="block px-4 py-2 hover:bg-gray-50 whitespace-nowrap"
-                        >
-                          Declaración de Fe
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
                 </div>
               );
             }

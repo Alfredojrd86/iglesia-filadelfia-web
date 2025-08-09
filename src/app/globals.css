@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-    /* keep full white */
+  --background: #f7f7f7;
+    /* global soft gray background */
     --foreground: #3a3c3f;
-      /* rgb(58,60,63) */
+    /* rgb(58,60,63) */
 }
 
 @theme inline {
@@ -14,12 +14,12 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-/* Force light theme (white background) regardless of system */
+/* Force light theme; keep same soft background regardless of system */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #ffffff;
+    --background: #f7f7f7;
     --foreground: #3a3c3f;
-      /* keep same in dark */
+    /* keep same in dark */
   }
 }
 

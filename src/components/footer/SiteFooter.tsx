@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function SiteFooter() {
   const year = new Date().getFullYear()
   return (
-    <footer className="mt-16 border-t bg-background">
+    <footer className="mt-16 border-t bg-[#ffffff]">
       <Container className="py-10 grid gap-10 md:grid-cols-3">
         <div className="space-y-3">
           <p className="text-xl font-semibold">Iglesia Filadelfia</p>
