@@ -5,20 +5,20 @@ import DonationCTA from '../components/cta/DonationCTA';
 export default function Home() {
   const mock = Array.from({length: 6}).map((_, i) => ({
     id: String(i + 1),
-    href: '#',
+    href: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', // enlace de ejemplo al video
     title: [
-      'Culto Dominical',
-      'Estudio Bíblico',
-      'Conferencia Misionera',
-      'Reporte de Misiones',
-      'Serie: Fe y Vida',
-      'Reflexión de la Semana',
+      'Predicación: El gozo en Cristo',
+      'Predicación: Fe que transforma',
+      'Predicación: Esperanza viva',
+      'Predicación: Amor que permanece',
+      'Predicación: La gracia de Dios',
+      'Predicación: Caminar por el Espíritu',
     ][i % 6],
     excerpt:
-      'Contenido de ejemplo para previsualizar cómo lucen las tarjetas en el grid. Este texto es reemplazado por datos reales.',
-    meta: i % 2 === 0 ? 'ARTÍCULO' : 'REPORTE',
-    imageSrc: '/window.svg',
-    authorName: 'John Piper',
+      'Breve descripción del mensaje: ideas principales, texto bíblico y aplicación práctica.',
+    meta: 'PREDICACIÓN RECIENTE',
+    imageSrc: `https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg`, // thumb ejemplo
+    authorName: 'Pastor Invitado',
     authorAvatarUrl: 'https://i.pravatar.cc/80?img=' + (i + 1),
   }));
 

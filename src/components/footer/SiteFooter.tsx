@@ -17,14 +17,7 @@ export default function SiteFooter() {
           <div className="space-y-2">
             <p className="font-medium">Sitio</p>
             <ul className="space-y-1">
-              <li>
-                <Link
-                  href="/misioneros"
-                  className="text-foreground/70 hover:text-foreground"
-                >
-                  Misioneros
-                </Link>
-              </li>
+              {/* Misioneros oculto hasta post-MVP */}
               <li>
                 <Link
                   href="/eventos"

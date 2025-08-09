@@ -6,7 +6,7 @@ import Container from '../ui/Container';
 
 const nav = [
   {href: '/', label: 'Inicio'},
-  {href: '/misioneros', label: 'Misioneros'},
+  // {href: '/misioneros', label: 'Misioneros'}, // oculto hasta post-MVP
   {href: '/eventos', label: 'Eventos'},
   {href: '/acerca', label: 'Acerca'},
   {href: '/donaciones', label: 'Dar'},
